@@ -23,7 +23,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
-public class UpYun {
+public class DSJTools {
 
 	/** 默认的编码格式 */
 	private static final String UTF8 = "UTF-8";
@@ -109,7 +109,7 @@ public class UpYun {
 	 *            密码，不需要MD5加密
 	 * @return UpYun object
 	 */
-	public UpYun(String bucketName, String userName, String password) {
+	public DSJTools(String bucketName, String userName, String password) {
 		this.bucketName = bucketName;
 		this.userName = userName;
 		this.password = md5(password);

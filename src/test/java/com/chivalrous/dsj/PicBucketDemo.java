@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.chivalrous.dsj.UpYun.PARAMS;
+import com.chivalrous.dsj.DSJTools.PARAMS;
 
 
 /**
@@ -35,7 +35,7 @@ public class PicBucketDemo {
 	private static final String SAMPLE_PIC_FILE = System
 			.getProperty("user.dir") + "/sample.jpeg";
 
-	private static UpYun upyun = null;
+	private static DSJTools upyun = null;
 
 	static {
 		File picFile = new File(SAMPLE_PIC_FILE);
@@ -48,7 +48,7 @@ public class PicBucketDemo {
 	public static void main(String[] args) throws Exception {
 
 		// 初始化空间
-		upyun = new UpYun(BUCKET_NAME, USER_NAME, USER_PWD);
+		upyun = new DSJTools(BUCKET_NAME, USER_NAME, USER_PWD);
 
 		// ****** 可选设置 begin ******
 
@@ -98,7 +98,7 @@ public class PicBucketDemo {
 
 		// 设置待上传文件的 Content-MD5 值
 		// 如果又拍云服务端收到的文件MD5值与用户设置的不一致，将回报 406 NotAcceptable 错误
-		upyun.setContentMD5(UpYun.md5(file));
+		upyun.setContentMD5(DSJTools.md5(file));
 
 		// 设置待上传文件的"访问密钥"
 		// 注意：
